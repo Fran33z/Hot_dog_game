@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Hotdog Catcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="gameWrap">
+    <canvas id="game" width="960" height="540" aria-label="Hotdog Catcher játék"></canvas>
+
+    <section id="startScreen" class="overlay">
+      <div class="panel menuPanel">
+        <div class="brandRow">
+          <img src="assets/spar_to_go.png" alt="SPAR to Go" class="sparLogo" />
+          <img src="assets/regnum_logo.png" alt="Regnum saját hazai húsüzemünkből" class="regnumLogo" />
+        </div>
+        <h1>Hotdog Catcher</h1>
+        <p>Kapd el a lefelé hulló virsliket az álló kiflivel. Minél pontosabban kapod el őket, annál több pontot kapsz.</p>
+        <p class="small">20 másodperced van. Ahogy fogy az idő, a virslik gyorsabban és kiszámíthatatlanabbul hullanak.</p>
+        <p class="small">Irányítás: kattints a kiflire, majd húzd jobbra-balra. A középre kapott virsli PERFECT, a folyamatos elkapások combo-szorzót adnak. Egy leejtett virsli lenullázza a combót.</p>
+        <button id="startBtn">Játék indítása</button>
+      </div>
+    </section>
+
+    <section id="endScreen" class="overlay hidden endOverlay">
+      <div class="endArtwork">
+        <img src="assets/end_screen.png" alt="Lejárt az idő képernyő" class="endArtImg" />
+        <div class="endScoreCover">
+          <div class="endScoreLabel">VÉGSŐ PONTSZÁM:</div>
+          <div id="finalScore" class="endScoreValue">0</div>
+        </div>
+        <button id="restartBtn" class="artButton" aria-label="Új játék">Új játék</button>
+      </div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
